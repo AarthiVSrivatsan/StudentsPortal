@@ -1,5 +1,5 @@
 class Utility{
-  static const DEFAULT_LOCATION = "Chennai";
+  static DEFAULT_LOCATION = "Chennai";
 }
 class DOMUtils{
   static hideAllWrappers() {
