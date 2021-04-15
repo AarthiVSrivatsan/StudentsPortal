@@ -23,12 +23,12 @@ class SearchProfiles{
             if(value == "Technology") {
                 document.getElementById("techwrapper").classList.remove("dcappfsdbhide");
             }
-            if(value == "Designation") {
-                document.getElementById("designationwrapper").classList.remove("dcappfsdbhide");
-            }
-            if(value == "WorkProfile") {
-                document.getElementById("workprofilewrapper").classList.remove("dcappfsdbhide");
-            }
+            // if(value == "Designation") {
+            //     document.getElementById("designationwrapper").classList.remove("dcappfsdbhide");
+            // }
+            // if(value == "WorkProfile") {
+            //     document.getElementById("workprofilewrapper").classList.remove("dcappfsdbhide");
+            // }
             if(value == "ProjectName") {
                 document.getElementById("projectnamewrapper").classList.remove("dcappfsdbhide");
             }
@@ -54,7 +54,7 @@ class SearchProfiles{
                 radiobuttons[i].value != "All" && (location = radiobuttons[i].value);
             }
         }
-         var school = "School of Technology";
+         var school = "";
         var radiobuttons = document.getElementsByName("school");
         for(var i=0; i<radiobuttons.length; i++) {
             if(radiobuttons[i].checked){
@@ -81,9 +81,9 @@ class SearchProfiles{
             }
         }
 
-        var designation = document.getElementById("designation").value || "";
+        //var designation = document.getElementById("designation").value || "";
 
-        var workprofile = document.getElementById("workprofile").value || "";
+        //var workprofile = document.getElementById("workprofile").value || "";
 
         var bloodgroup = document.getElementById("bloodgroup").value;
 
@@ -104,8 +104,8 @@ class SearchProfiles{
         school && (params.school= school);
         teamname && (params.team = teamname);
         gender && (params.gender = gender);
-        designation && (params.designation = designation);
-        workprofile && (params.workprofile = workprofile);
+        //designation && (params.designation = designation);
+        //workprofile && (params.workprofile = workprofile);
         bloodgroup && (params.bloodgroup = bloodgroup);
         projectName && (params.projectname = projectName);
         streamatzs && (params.streamatzs = streamatzs);
