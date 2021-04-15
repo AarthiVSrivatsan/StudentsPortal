@@ -10,8 +10,8 @@ class DOMUtils{
         document.getElementById("techwrapper").classList.add("dcappfsdbhide");
         document.getElementById("searchwrapper").classList.add("dcappfsdbhide");
         document.getElementById("genderwrapper").classList.add("dcappfsdbhide");
-        document.getElementById("designationwrapper").classList.add("dcappfsdbhide");
-        document.getElementById("workprofilewrapper").classList.add("dcappfsdbhide");
+        //document.getElementById("designationwrapper").classList.add("dcappfsdbhide");
+        //document.getElementById("workprofilewrapper").classList.add("dcappfsdbhide");
         document.getElementById("bloodgroupwrapper").classList.add("dcappfsdbhide");
         document.getElementById("projectnamewrapper").classList.add("dcappfsdbhide");
         document.getElementById("streamwrapper").classList.add("dcappfsdbhide");
@@ -96,9 +96,9 @@ class DOMUtils{
 
         document.getElementById("yearofpassing").value="";
 
-        document.getElementById("designation").value="";
+        //document.getElementById("designation").value="";
 
-        document.getElementById("workprofile").value="";
+        //document.getElementById("workprofile").value="";
 
         document.getElementById("bloodgroup").value = "";
 
