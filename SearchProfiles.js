@@ -95,7 +95,7 @@ class SearchProfiles{
         var columnContentDiv = "";
         var eachDivContent = "";
         var templateRowContent = "";
-        params = {};
+        var params = {};
         params.location = "";
         params.school = "";
         params.skills = "";
