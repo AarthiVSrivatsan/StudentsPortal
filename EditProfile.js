@@ -14,7 +14,7 @@ class EditProfile{
     userid && (params.user = userid);
 
     $DX.get({
-       url: "/fsdb/functions/editProfile",
+       url: "/fsdb/function/editProfile",
        params: params,
        handler: function(response) {
          console.log(response);
