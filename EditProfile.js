@@ -17,8 +17,8 @@ class EditProfile{
        url: "/fsdb/function/editProfile",
        params: params,
        handler: function(response) {
-         console.log(response);
-         if(response == "Success") {
+         console.log(this.responseText);
+         if(this.responseText == "Success") {
            window.location.href="/profileDetails?studentId="+userid;
          }
        }
