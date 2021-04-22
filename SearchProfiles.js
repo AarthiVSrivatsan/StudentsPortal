@@ -17,6 +17,9 @@ class SearchProfiles{
             if(value == "GraduationYear") {
                 document.getElementById("graduationwrapper").classList.remove("dcappfsdbhide");
             }
+            if(value == "Batch") {
+                document.getElementById("batchwrapper").classList.remove("dcappfsdbhide");
+            }
             if(value == "Team"){
                 document.getElementById("teamwrapper").classList.remove("dcappfsdbhide");
             }
