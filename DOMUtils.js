@@ -6,9 +6,11 @@ class DOMUtils{
         document.getElementById("locwrapper").classList.add("dcappfsdbhide");
         document.getElementById("schoolwrapper").classList.add("dcappfsdbhide");
         document.getElementById("graduationwrapper").classList.add("dcappfsdbhide");
+        document.getElementById("batchwrapper").classList.add("dcappfsdbhide");
         document.getElementById("teamwrapper").classList.add("dcappfsdbhide");
         document.getElementById("techwrapper").classList.add("dcappfsdbhide");
         document.getElementById("searchwrapper").classList.add("dcappfsdbhide");
+        document.getElementById("batchwrapper").classList.add("dcappfsdbhide");
         document.getElementById("genderwrapper").classList.add("dcappfsdbhide");
         //document.getElementById("designationwrapper").classList.add("dcappfsdbhide");
         //document.getElementById("workprofilewrapper").classList.add("dcappfsdbhide");
@@ -95,6 +97,8 @@ class DOMUtils{
         }
 
         document.getElementById("yearofpassing").value="";
+
+        document.getElementById("batchwrapper").value = "";
 
         //document.getElementById("designation").value="";
 
