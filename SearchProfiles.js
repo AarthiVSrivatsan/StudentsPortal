@@ -26,9 +26,9 @@ class SearchProfiles{
             if(value == "Technology") {
                 document.getElementById("techwrapper").classList.remove("dcappfsdbhide");
             }
-            // if(value == "Designation") {
-            //     document.getElementById("designationwrapper").classList.remove("dcappfsdbhide");
-            // }
+            if(value == "Designation") {
+                document.getElementById("designationwrapper").classList.remove("dcappfsdbhide");
+            }
             // if(value == "WorkProfile") {
             //     document.getElementById("workprofilewrapper").classList.remove("dcappfsdbhide");
             // }
@@ -68,6 +68,8 @@ class SearchProfiles{
         var yearOfPassing = 0;
         yearOfPassing = (document.getElementById("yearofpassing") != null) ? document.getElementById("yearofpassing").value : 0;
 
+        var batch = "";
+        batch = document.getElementById("batch").value;
         var techs = [];
         var competencies = document.getElementById("tech");
         var techs = [... competencies.options]
@@ -84,7 +86,7 @@ class SearchProfiles{
             }
         }
 
-        //var designation = document.getElementById("designation").value || "";
+        var designation = document.getElementById("designation").value || "";
 
         //var workprofile = document.getElementById("workprofile").value || "";
 
@@ -103,11 +105,12 @@ class SearchProfiles{
         params.school = "";
         params.skills = "";
         yearOfPassing > 0 && (params.yearofpassing = yearOfPassing);
+        batch && (params.batch = batch);
         location && (params.location = location);
         school && (params.school= school);
         teamname && (params.team = teamname);
         gender && (params.gender = gender);
-        //designation && (params.designation = designation);
+        designation && (params.designation = designation);
         //workprofile && (params.workprofile = workprofile);
         bloodgroup && (params.bloodgroup = bloodgroup);
         projectName && (params.projectname = projectName);
