@@ -98,7 +98,7 @@ class DOMUtils{
 
         document.getElementById("yearofpassing").value="";
 
-        document.getElementById("batchwrapper").value = "";
+        document.getElementById("batch").value = "";
 
         document.getElementById("designation").value="";
 
