@@ -12,7 +12,7 @@ class DOMUtils{
         document.getElementById("searchwrapper").classList.add("dcappfsdbhide");
         document.getElementById("batchwrapper").classList.add("dcappfsdbhide");
         document.getElementById("genderwrapper").classList.add("dcappfsdbhide");
-        //document.getElementById("designationwrapper").classList.add("dcappfsdbhide");
+        document.getElementById("designationwrapper").classList.add("dcappfsdbhide");
         //document.getElementById("workprofilewrapper").classList.add("dcappfsdbhide");
         document.getElementById("bloodgroupwrapper").classList.add("dcappfsdbhide");
         document.getElementById("projectnamewrapper").classList.add("dcappfsdbhide");
@@ -100,7 +100,7 @@ class DOMUtils{
 
         document.getElementById("batchwrapper").value = "";
 
-        //document.getElementById("designation").value="";
+        document.getElementById("designation").value="";
 
         //document.getElementById("workprofile").value="";
 
