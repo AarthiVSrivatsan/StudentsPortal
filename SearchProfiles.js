@@ -1,7 +1,8 @@
 class SearchProfiles{
   static openSearchOptions(options) {
     var userrole = document.getElementById("userrole").value;
-        DOMUtils.clearAll();
+    DOMUtils.hideAllWrappers();
+    DOMUtils.restoreDefaults();
         document.getElementById("searchwrapper").classList.remove("dcappfsdbhide");
 
         var choices = [... document.getElementById("searchcriteria1").options]
