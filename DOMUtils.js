@@ -118,10 +118,10 @@ class DOMUtils{
     }
     static clearAll() {
         DOMUtils.hideAllWrappers();
-		document.getElementById("searchcriteria1").options.forEach(function(item, i) {
+		[... document.getElementById("searchcriteria1").options].forEach(function(item, i) {
             item.setAttribute("selected", "");
         });
 
-        restoreDefaults();
+        DOMUtils.restoreDefaults();
     }
 }
