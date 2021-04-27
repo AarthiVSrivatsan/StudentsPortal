@@ -35,7 +35,8 @@ class DOMUtils{
         }
 
         if(selectedValue == "School of Technology" || selectedValue == "School for Advanced Studies") {
-            document.getElementsByClassName("skills_animation")[0].classList.add("dcappfsdbhide");
+            document.getElementsByClassName("skills_motiondesign")[0].classList.add("dcappfsdbhide");
+            document.getElementsByClassName("skills_graphicdesign")[0].classList.add("dcappfsdbhide");
             document.getElementsByClassName("skills_pencilsketch")[0].classList.add("dcappfsdbhide");
             document.getElementsByClassName("skills_webdesign")[0].classList.add("dcappfsdbhide");
             document.getElementsByClassName("skills_mobiledesign")[0].classList.add("dcappfsdbhide");
@@ -62,7 +63,8 @@ class DOMUtils{
             document.getElementsByClassName("skills_ml")[0].classList.add("dcappfsdbhide");
             document.getElementsByClassName("skills_testing")[0].classList.add("dcappfsdbhide");
         } else if(selectedValue == "School of Business"){
-            document.getElementsByClassName("skills_animation")[0].classList.add("dcappfsdbhide");
+            document.getElementsByClassName("skills_motiondesign")[0].classList.add("dcappfsdbhide");
+            document.getElementsByClassName("skills_graphicdesign")[0].classList.add("dcappfsdbhide");
             document.getElementsByClassName("skills_pencilsketch")[0].classList.add("dcappfsdbhide");
             document.getElementsByClassName("skills_webdesign")[0].classList.add("dcappfsdbhide");
             document.getElementsByClassName("skills_mobiledesign")[0].classList.add("dcappfsdbhide");
