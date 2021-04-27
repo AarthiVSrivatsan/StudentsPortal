@@ -83,17 +83,17 @@ class DOMUtils{
     static restoreDefaults() {
         var radiobuttons = document.getElementsByName("location");
         for(var i=0; i<radiobuttons.length; i++) {
-            radiobuttons[i].setAttribute("checked", "");
+            radiobuttons[i].checked = false;
         }
 
         radiobuttons = document.getElementsByName("school");
         for(var i=0; i<radiobuttons.length; i++) {
-            radiobuttons[i].setAttribute("checked", "");
+            radiobuttons[i].checked = false;
         }
 
         radiobuttons = document.getElementsByName("gender");
         for(var i=0; i<radiobuttons.length; i++) {
-            radiobuttons[i].setAttribute("checked", "");
+            radiobuttons[i].checked = false;
         }
 
         document.getElementById("yearofpassing").value="";
@@ -111,7 +111,7 @@ class DOMUtils{
         document.getElementById("streamatzs").value = "";
 
         document.getElementById("tech").options.forEach(function(item, i) {
-            item.setAttribute("selected", "");
+            item.selected = false;
         });
 
 
@@ -119,7 +119,7 @@ class DOMUtils{
     static clearAll() {
         DOMUtils.hideAllWrappers();
 		[... document.getElementById("searchcriteria1").options].forEach(function(item, i) {
-            item.setAttribute("selected", "");
+            item.selected = false;
         });
 
         DOMUtils.restoreDefaults();
