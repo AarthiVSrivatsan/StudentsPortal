@@ -110,7 +110,7 @@ class DOMUtils{
 
         document.getElementById("streamatzs").value = "";
 
-        document.getElementById("tech").options.forEach(function(item, i) {
+        [... document.getElementById("tech").options].forEach(function(item, i) {
             item.selected = false;
         });
 
