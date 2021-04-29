@@ -50,7 +50,7 @@ class SearchProfiles{
 
   static clickTriggered(options) {
     console.log(options);
-        var location = "Chennai";
+        var location = "";
         var radiobuttons = document.getElementsByName("location");
         for(var i=0; i<radiobuttons.length; i++) {
             if(radiobuttons[i].checked){
