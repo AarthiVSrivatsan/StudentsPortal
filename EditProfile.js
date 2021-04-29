@@ -18,9 +18,9 @@ class EditProfile{
     $DX.get({
        url: "/fsdb/function/editProfile",
        params: params,
-       handler: function(response) {
-         console.log(response);
-         if(response == "Success") {
+       handler: function() {
+         console.log(this.responseText);
+         if(this.responseText == "Success") {
            window.location.href="/profileDetails?studentId="+userid;
          }
        }
