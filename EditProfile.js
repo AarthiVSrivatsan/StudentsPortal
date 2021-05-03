@@ -21,7 +21,7 @@ class EditProfile{
        handler: function() {
          console.log(this.responseText);
          if(this.responseText == "Success") {
-           window.location.href="/profileDetails?studentId="+userid;
+           window.location.href="/profiledetails?studentId="+userid;
          }
        }
     });
