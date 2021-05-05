@@ -1,9 +1,12 @@
 class EditProfile{
   static editDetails(options) {
     var selfdesc = document.getElementById("selfdesc").value;
-    var gradyear = document.getElementById("gradyear").value;
-    var batch = document.getElementById("batch").value;
-    var streamzs = document.getElementById("streamzs").value;
+    var gradyear = 0;
+    document.getElementById("gradyear") && (gradyear = document.getElementById("gradyear").value);
+    var batch = 0;
+    document.getElementById("batch") && (batch = document.getElementById("batch").value);
+    var streamzs = "";
+    document.getElementById("streamzs") && (streamzs = document.getElementById("streamzs").value);
     var designation = document.getElementById("designation").value;
     var userid = document.getElementById("userid").value;
 
