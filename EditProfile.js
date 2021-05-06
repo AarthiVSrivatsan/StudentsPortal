@@ -7,14 +7,19 @@ class EditProfile{
     document.getElementById("batch") && (batch = document.getElementById("batch").value);
     var streamzs = "";
     document.getElementById("streamzs") && (streamzs = document.getElementById("streamzs").value);
+    var areasofinterest = [];
+    document.getElementById("areasofinterest") && (areasofinterest = [... document.getElementById("areasofinterest").options].filter(option => option.selected).map(option => option.value));
     var designation = document.getElementById("designation").value;
     var userid = document.getElementById("userid").value;
+    var hobbies = document.getElementById("hobbies").value;
 
     var params = {};
     selfdesc && (params.selfdesc = selfdesc);
     gradyear && (params.gradyear = gradyear);
     batch && (params.batch = batch);
     streamzs && (params.streamzs = streamzs);
+    areasofinterest && (params.areasofinterest = areasofinterest);
+    hobbies && (params.hobbies = hobbies);
     designation && (params.designation = designation);
     userid && (params.user = userid);
 
