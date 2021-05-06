@@ -30,9 +30,12 @@ class SearchProfiles{
             if(value == "Designation") {
                 document.getElementById("designationwrapper").classList.remove("dcappfsdbhide");
             }
-            // if(value == "WorkProfile") {
-            //     document.getElementById("workprofilewrapper").classList.remove("dcappfsdbhide");
-            // }
+            if(value == "AreaOfInterest") {
+                document.getElementById("interestwrapper").classList.remove("dcappfsdbhide");
+            }
+            if(value == "Hobbies") {
+                document.getElementById("hobbieswrapper").classList.remove("dcappfsdbhide");
+            }
             if(value == "ProjectName") {
                 document.getElementById("projectnamewrapper").classList.remove("dcappfsdbhide");
             }
@@ -89,7 +92,9 @@ class SearchProfiles{
 
         var designation = document.getElementById("designation").value || "";
 
-        //var workprofile = document.getElementById("workprofile").value || "";
+        var areasofinterest = [... document.getElementById("areasofinterest").options].filter(option => option.selected).map(option => option.value);
+
+        var hobbies = document.getElementById("hobbies").value;
 
         var bloodgroup = document.getElementById("bloodgroup").value;
 
