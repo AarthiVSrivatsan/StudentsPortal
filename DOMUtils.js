@@ -13,7 +13,10 @@ class DOMUtils{
         document.getElementById("batchwrapper").classList.add("dcappfsdbhide");
         document.getElementById("genderwrapper").classList.add("dcappfsdbhide");
         document.getElementById("designationwrapper").classList.add("dcappfsdbhide");
-        //document.getElementById("workprofilewrapper").classList.add("dcappfsdbhide");
+
+        document.getElementById("interestwrapper").classList.add("dcappfsdbhide");
+        document.getElementById("hobbieswrapper").classList.add("dcappfsdbhide");
+
         document.getElementById("bloodgroupwrapper").classList.add("dcappfsdbhide");
         document.getElementById("projectnamewrapper").classList.add("dcappfsdbhide");
         document.getElementById("streamwrapper").classList.add("dcappfsdbhide");
@@ -104,7 +107,12 @@ class DOMUtils{
 
         document.getElementById("designation").value="";
 
-        //document.getElementById("workprofile").value="";
+        [... document.getElementById("areasofinterest").options].forEach((item, i) => {
+          item.selected = false;
+        });
+
+        document.getElementById("hobbies").value = "";
+
 
         document.getElementById("bloodgroup").value = "";
 
