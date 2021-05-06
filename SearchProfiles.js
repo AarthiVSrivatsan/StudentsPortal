@@ -117,7 +117,8 @@ class SearchProfiles{
         teamname && (params.team = teamname);
         gender && (params.gender = gender);
         designation && (params.designation = designation);
-        //workprofile && (params.workprofile = workprofile);
+        areasofinterest && (params.areasofinterest = areasofinterest);
+        hobbies && (params.hobbies = hobbies);
         bloodgroup && (params.bloodgroup = bloodgroup);
         projectName && (params.projectname = projectName);
         streamatzs && (params.streamatzs = streamatzs);
