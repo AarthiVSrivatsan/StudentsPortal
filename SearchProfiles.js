@@ -4,12 +4,16 @@ class SearchProfiles{
     document.getElementById("encloser").classList.add("dcappfsdbhide");
   }
   static showAdvancedSearch(){
-	  var slimselect = new SlimSelect({
-      		select: '#searchcriteria1'
-  		});
     document.getElementById("openSearchOptions").classList.add("dcappfsdbhide");
     document.getElementById("encloser").classList.remove("dcappfsdbhide");
-	 
+
+    var searchcriteriaSlimSelect = new SlimSelect({
+      		select: '#searchcriteria1'
+  		});
+
+      var areasofinterestSlimSelect = new SlimSelect({
+        select: "#areasofinterest"
+      });
   }
   static openSearchOptions(options) {
     var userrole = document.getElementById("userrole").value;
