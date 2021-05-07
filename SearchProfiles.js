@@ -69,6 +69,9 @@ class SearchProfiles{
 
   static clickTriggered(options) {
     console.log(options);
+
+        var studentname = document.getElementById("studentname").value;
+
         var location = "";
         var radiobuttons = document.getElementsByName("location");
         for(var i=0; i<radiobuttons.length; i++) {
@@ -123,6 +126,7 @@ class SearchProfiles{
         var eachDivContent = "";
         var templateRowContent = "";
         var params = {};
+        studentname && (params.studentname= studentname);
         params.location = "";
         params.school = "";
         params.skills = "";
