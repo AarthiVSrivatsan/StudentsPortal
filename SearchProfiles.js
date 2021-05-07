@@ -1,4 +1,7 @@
 class SearchProfiles{
+  static searchCriteriaSelect;
+  static areasofinterestSelect;
+  
   static closeAdvancedSearch() {
     document.getElementById("openSearchOptions").classList.remove("dcappfsdbhide");
     document.getElementById("encloser").classList.add("dcappfsdbhide");
@@ -7,11 +10,11 @@ class SearchProfiles{
     document.getElementById("openSearchOptions").classList.add("dcappfsdbhide");
     document.getElementById("encloser").classList.remove("dcappfsdbhide");
 
-    var searchcriteriaSlimSelect = new SlimSelect({
+    var searchCriteriaSelect = new SlimSelect({
       		select: '#searchcriteria1'
   		});
 
-      var areasofinterestSlimSelect = new SlimSelect({
+      var areasofinterestSelect = new SlimSelect({
         select: "#areasofinterest"
       });
   }
