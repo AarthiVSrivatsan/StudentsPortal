@@ -111,7 +111,7 @@ class DOMUtils{
         //   item.selected = false;
         // });
 
-        areasofinterestSelect.set([]);
+        SearchProfiles.areasofinterestSelect.set([]);
 
         document.getElementById("hobbies").value = "";
 
@@ -133,7 +133,7 @@ class DOMUtils{
 		// [... document.getElementById("searchcriteria1").options].forEach(function(item, i) {
     //         item.selected = false;
     //     });
-      searchCriteriaSelect.set([]);
+      SearchProfiles.searchCriteriaSelect.set([]);
 
         DOMUtils.restoreDefaults();
     }
