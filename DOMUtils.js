@@ -107,9 +107,11 @@ class DOMUtils{
 
         document.getElementById("designation").value="";
 
-        [... document.getElementById("areasofinterest").options].forEach((item, i) => {
-          item.selected = false;
-        });
+        // [... document.getElementById("areasofinterest").options].forEach((item, i) => {
+        //   item.selected = false;
+        // });
+
+        areasofinterestSelect.set([]);
 
         document.getElementById("hobbies").value = "";
 
@@ -128,9 +130,10 @@ class DOMUtils{
     }
     static clearAll() {
         DOMUtils.hideAllWrappers();
-		[... document.getElementById("searchcriteria1").options].forEach(function(item, i) {
-            item.selected = false;
-        });
+		// [... document.getElementById("searchcriteria1").options].forEach(function(item, i) {
+    //         item.selected = false;
+    //     });
+      searchCriteriaSelect.set([]);
 
         DOMUtils.restoreDefaults();
     }
