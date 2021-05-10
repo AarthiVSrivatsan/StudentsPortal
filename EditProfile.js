@@ -1,8 +1,13 @@
 class EditProfile{
+  static areasofinterestedit;
   static editAreasOfInterest() {
     document.getElementById("areasofinteresttxt").classList.add("dcappfsdbhide");
+    EditProfile.areasofinterestedit = new SlimSelect({
+      select: "#areasofinterestedit"
+    });
     document.getElementById("areasofinterestms").classList.remove("dcappfsdbhide");
     document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
+
   }
   static editDetails(options) {
     var selfdesc = document.getElementById("selfdesc").value;
@@ -13,7 +18,7 @@ class EditProfile{
     var streamzs = "";
     document.getElementById("streamzs") && (streamzs = document.getElementById("streamzs").value);
     var areasofinterest = [];
-    document.getElementById("areasofinterest") && (areasofinterest = [... document.getElementById("areasofinterest").options].filter(option => option.selected).map(option => option.value));
+    document.getElementById("areasofinterestedit") && (areasofinterest = [... document.getElementById("areasofinterestedit").options].filter(option => option.selected).map(option => option.value));
     var designation = document.getElementById("designation").value;
     var userid = document.getElementById("userid").value;
     var hobbies = document.getElementById("hobbies").value;
