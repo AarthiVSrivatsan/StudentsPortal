@@ -5,17 +5,17 @@ class SearchProfiles{
   static closeAdvancedSearch() {
     document.getElementById("openSearchOptions").classList.remove("dcappfsdbhide");
     document.getElementById("encloser").classList.add("dcappfsdbhide");
-    searchCriteriaSelect.set([]);
+    SearchProfiles.searchCriteriaSelect.set([]);
   }
   static showAdvancedSearch(){
     document.getElementById("openSearchOptions").classList.add("dcappfsdbhide");
     document.getElementById("encloser").classList.remove("dcappfsdbhide");
 
-    searchCriteriaSelect = new SlimSelect({
+    SearchProfiles.searchCriteriaSelect = new SlimSelect({
       		select: '#searchcriteria1'
   		});
 
-    areasofinterestSelect = new SlimSelect({
+    SearchProfiles.areasofinterestSelect = new SlimSelect({
         select: "#areasofinterest"
       });
   }
