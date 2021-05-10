@@ -1,10 +1,12 @@
 class EditProfile{
   static areasofinterestedit;
-  static editAreasOfInterest() {
+  static editAreasOfInterest(aoi) {
     document.getElementById("areasofinteresttxt").classList.add("dcappfsdbhide");
     EditProfile.areasofinterestedit = new SlimSelect({
       select: "#areasofinterestedit"
     });
+
+    EditProfile.areasofinterestedit.set(aoi);
     document.getElementById("areasofinterestms").classList.remove("dcappfsdbhide");
     document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
 
