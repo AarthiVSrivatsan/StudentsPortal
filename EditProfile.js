@@ -1,4 +1,9 @@
 class EditProfile{
+  static editAreasOfInterest() {
+    document.getElementById("areasofinteresttxt").classList.add("dcappfsdbhide");
+    document.getElementById("areasofinterestms").classList.remove("dcappfsdbhide");
+    document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
+  }
   static editDetails(options) {
     var selfdesc = document.getElementById("selfdesc").value;
     var gradyear = 0;
