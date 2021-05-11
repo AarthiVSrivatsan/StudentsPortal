@@ -23,11 +23,14 @@ class SearchProfiles{
     var userrole = document.getElementById("userrole").value;
     DOMUtils.hideAllWrappers();
     DOMUtils.restoreDefaults();
-        document.getElementById("searchwrapper").classList.remove("dcappfsdbhide");
+
 
         var choices = [... document.getElementById("searchcriteria1").options]
 		. filter(option => option.selected)
 		.map(option => option.value);
+      if(choices.length > 0) {
+        document.getElementById("searchwrapper").classList.remove("dcappfsdbhide");
+      }
         choices.forEach(function(value, i) {
             if(value == "Location"){
                 document.getElementById("locwrapper").classList.remove("dcappfsdbhide");
