@@ -7,8 +7,8 @@ class EditProfile{
     });
 
     EditProfile.areasofinterestedit.set(aoi);
-    document.getElementById("areasofinterestms").classList.remove("dcappfsdbhide");
-    document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
+    document.getElementById("areasofinterestedit").classList.remove("dcappfsdbhide");
+    //document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
 
   }
   static editDetails(options) {
@@ -30,7 +30,7 @@ class EditProfile{
     gradyear && (params.gradyear = gradyear);
     batch && (params.batch = batch);
     streamzs && (params.streamzs = streamzs);
-    areasofinterest && (params.areasofinterest = areasofinterest);
+    areasofinterest && (params.areasofinterest = areasofinterest.join(","));
     hobbies && (params.hobbies = hobbies);
     designation && (params.designation = designation);
     userid && (params.user = userid);
