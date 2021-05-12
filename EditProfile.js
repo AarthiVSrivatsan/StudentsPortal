@@ -1,3 +1,4 @@
+"use strict";
 class EditProfile{
   static areasofinterestedit;
   static editAreasOfInterest(aoi) {
