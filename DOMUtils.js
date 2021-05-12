@@ -1,3 +1,4 @@
+"use strict";
 class Utility{
   static DEFAULT_LOCATION = "Chennai";
 }
