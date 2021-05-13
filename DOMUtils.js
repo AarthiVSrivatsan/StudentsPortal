@@ -2,7 +2,7 @@
 
 var DOMUtils = function (){}
 
-  DOMUtils.hideAllWrappers() {
+  DOMUtils.hideAllWrappers = function() {
         document.getElementById("locwrapper").classList.add("dcappfsdbhide");
         document.getElementById("schoolwrapper").classList.add("dcappfsdbhide");
         document.getElementById("graduationwrapper").classList.add("dcappfsdbhide");
@@ -23,7 +23,7 @@ var DOMUtils = function (){}
     }
 
 
-    DOMUtils.hideUnnecessaryOptions(options) {
+    DOMUtils.hideUnnecessaryOptions = function(options) {
         console.log("I am called");
         var selectedValue = "School of Technology";
         var radiobuttons = document.getElementsByName("school");
@@ -85,7 +85,7 @@ var DOMUtils = function (){}
             document.getElementsByClassName("skills_testing")[0].classList.add("dcappfsdbhide");
         }
     }
-    DOMUtils.restoreDefaults() {
+    DOMUtils.restoreDefaults = function() {
         var radiobuttons = document.getElementsByName("location");
         for(var i=0; i<radiobuttons.length; i++) {
             radiobuttons[i].checked = false;
@@ -128,7 +128,7 @@ var DOMUtils = function (){}
 
 
     }
-    DOMUtils.clearAll() {
+    DOMUtils.clearAll= function() {
         DOMUtils.hideAllWrappers();
 		// [... document.getElementById("searchcriteria1").options].forEach(function(item, i) {
     //         item.selected = false;
