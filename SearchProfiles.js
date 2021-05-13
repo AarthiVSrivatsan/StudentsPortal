@@ -1,14 +1,18 @@
 "use strict";
-class SearchProfiles{
-  static searchCriteriaSelect;
-  static areasofinterestSelect;
+var SearchProfiles = function() {
 
-  static closeAdvancedSearch() {
+}
+SearchProfiles.searchCriteriaSelect = null;
+SearchProfiles.areasofinterestSelect = null;
+
+
+
+  SearchProfiles.closeAdvancedSearch = function() {
     document.getElementById("openSearchOptions").classList.remove("dcappfsdbhide");
     document.getElementById("encloser").classList.add("dcappfsdbhide");
     SearchProfiles.searchCriteriaSelect.set([]);
   }
-  static showAdvancedSearch(){
+  SearchProfiles.showAdvancedSearch = function(){
     document.getElementById("openSearchOptions").classList.add("dcappfsdbhide");
     document.getElementById("encloser").classList.remove("dcappfsdbhide");
 
@@ -20,7 +24,7 @@ class SearchProfiles{
         select: "#areasofinterest"
       });
   }
-  static openSearchOptions(options) {
+  SearchProfiles.openSearchOptions = function(options) {
     var userrole = document.getElementById("userrole").value;
     DOMUtils.hideAllWrappers();
     DOMUtils.restoreDefaults();
@@ -75,7 +79,7 @@ class SearchProfiles{
         });
   }
 
-  static clickTriggered(options) {
+  SearchProfiles.clickTriggered = function(options) {
     console.log(options);
 
         var studentname = document.getElementById("studentname").value;
@@ -167,4 +171,3 @@ class SearchProfiles{
            }
         });
   }
-}
