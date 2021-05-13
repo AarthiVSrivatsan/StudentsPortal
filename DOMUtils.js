@@ -126,6 +126,8 @@ var DOMUtils = function (){}
             item.selected = false;
         });
 
+        document.getElementById("studentname").value = "";
+
 
     }
     DOMUtils.clearAll= function() {
@@ -133,7 +135,8 @@ var DOMUtils = function (){}
 		// [... document.getElementById("searchcriteria1").options].forEach(function(item, i) {
     //         item.selected = false;
     //     });
-      SearchProfiles.searchCriteriaSelect.set([]);
 
+      SearchProfiles.searchCriteriaSelect.set([]);
         DOMUtils.restoreDefaults();
+        document.getElementById("openSearchOptions").classList.remove("dcappfsdbhide");
     }
