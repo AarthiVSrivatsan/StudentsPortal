@@ -1,7 +1,8 @@
 "use strict";
-class EditProfile{
-  static areasofinterestedit;
-  static editAreasOfInterest(aoi) {
+var EditProfile = function() {}
+
+  EditProfile.areasofinterestedit = null;
+  EditProfile.editAreasOfInterest = function(aoi) {
     document.getElementById("areasofinteresttxt").classList.add("dcappfsdbhide");
     EditProfile.areasofinterestedit = new SlimSelect({
       select: "#areasofinterestedit"
@@ -12,7 +13,7 @@ class EditProfile{
     //document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
 
   }
-  static editDetails(options) {
+  EditProfile.editDetails = function(options) {
     var selfdesc = document.getElementById("selfdesc").value;
     var gradyear = 0;
     document.getElementById("gradyear") && (gradyear = document.getElementById("gradyear").value);
@@ -48,4 +49,3 @@ class EditProfile{
     });
 
   }
-}
