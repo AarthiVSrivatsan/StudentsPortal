@@ -1,7 +1,7 @@
 "use strict";
-class ProjectDetails {
+var ProjectDetails = function() {}
 
-  static openProjectPage(options) {
+
+ProjectDetails.openProjectPage = function(options) {
     window.location.href="/profileDetails?studentId="+options.params["student-id"];
   }
-}
