@@ -138,5 +138,5 @@ var DOMUtils = function (){}
 
       SearchProfiles.searchCriteriaSelect.set([]);
         DOMUtils.restoreDefaults();
-        document.getElementById("openSearchOptions").classList.remove("dcappfsdbhide");
+        //document.getElementById("openSearchOptions").classList.remove("dcappfsdbhide");
     }
