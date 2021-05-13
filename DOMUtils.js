@@ -1,6 +1,6 @@
 "use strict";
 
-function DOMUtils(){}
+var DOMUtils = function (){}
 
   DOMUtils.hideAllWrappers() {
         document.getElementById("locwrapper").classList.add("dcappfsdbhide");
