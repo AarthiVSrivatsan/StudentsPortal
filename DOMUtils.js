@@ -1,9 +1,8 @@
 "use strict";
-class Utility{
-  static DEFAULT_LOCATION = "Chennai";
-}
-class DOMUtils{
-  static hideAllWrappers() {
+
+function DOMUtils(){}
+
+  DOMUtils.hideAllWrappers() {
         document.getElementById("locwrapper").classList.add("dcappfsdbhide");
         document.getElementById("schoolwrapper").classList.add("dcappfsdbhide");
         document.getElementById("graduationwrapper").classList.add("dcappfsdbhide");
@@ -24,8 +23,8 @@ class DOMUtils{
     }
 
 
-    static hideUnnecessaryOptions(options) {
-        console.log("I am called", Utility.DEFAULT_LOCATION);
+    DOMUtils.hideUnnecessaryOptions(options) {
+        console.log("I am called");
         var selectedValue = "School of Technology";
         var radiobuttons = document.getElementsByName("school");
         for(var i=0; i<radiobuttons.length; i++) {
@@ -86,7 +85,7 @@ class DOMUtils{
             document.getElementsByClassName("skills_testing")[0].classList.add("dcappfsdbhide");
         }
     }
-    static restoreDefaults() {
+    DOMUtils.restoreDefaults() {
         var radiobuttons = document.getElementsByName("location");
         for(var i=0; i<radiobuttons.length; i++) {
             radiobuttons[i].checked = false;
@@ -129,7 +128,7 @@ class DOMUtils{
 
 
     }
-    static clearAll() {
+    DOMUtils.clearAll() {
         DOMUtils.hideAllWrappers();
 		// [... document.getElementById("searchcriteria1").options].forEach(function(item, i) {
     //         item.selected = false;
@@ -138,4 +137,3 @@ class DOMUtils{
 
         DOMUtils.restoreDefaults();
     }
-}
