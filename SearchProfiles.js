@@ -159,7 +159,6 @@ class SearchProfiles{
            url: "/fsdb/AllProfiles",
            params: params,
            handler: function() {
-               console.log(Utility.DEFAULT_LOCATION);
                eachDivContent = this.responseText;
                document.getElementById("resultWrapper").innerHTML = eachDivContent;
 			  //entireContent = parser.parseFromString(eachDivContent, 'text/html');
