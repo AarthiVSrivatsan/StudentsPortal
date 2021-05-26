@@ -17,8 +17,8 @@ var EditProfile = function() {}
     //document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
 
   }
-  EditProfile.removeTeamHistory = function(elem) {
-    var teamName = elem.getAttribute("tname");
+  EditProfile.removeTeamHistory = function(tname) {
+    var teamName = tname;
     var userid = document.getElementById("userid").value;
 
     var params = {};
