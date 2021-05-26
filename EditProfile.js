@@ -9,7 +9,9 @@ var EditProfile = function() {}
       select: "#areasofinterestedit"
     });
 
-    EditProfile.areasofinterestedit.set(aoi);
+    if(aoi != "") {
+      EditProfile.areasofinterestedit.set(aoi);
+    }
     document.getElementById("areasofinterestedit").classList.remove("dcappfsdbhide");
     //document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
 
