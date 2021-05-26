@@ -27,17 +27,23 @@ var EditProfile = function() {}
     var selfdesc = document.getElementById("selfdesc").value;
     var gradyear = 0;
     document.getElementById("gradyear") && (gradyear = document.getElementById("gradyear").value);
-    if(gradyear < 1980) {
-      alert("Invalid entries in the form. Graduation year should be after 1980");
-      return;
+    if(document.getElementById("gradyear")) {
+      if(gradyear < 1980) {
+        alert("Invalid entries in the form. Graduation year should be after 1980");
+        return;
+      }
     }
+
     var batch = 0;
     document.getElementById("batch") && (batch = document.getElementById("batch").value);
-
-    if(batch < 1) {
-      alert("Invalid entries in the form. Batch should be greater than 1");
-      return;
+    if(document.getElementById("batch")) {
+      if(batch < 1) {
+        alert("Invalid entries in the form. Batch should be greater than 1");
+        return;
+      }
     }
+
+
     var streamzs = "";
     document.getElementById("streamzs") && (streamzs = document.getElementById("streamzs").value);
     var areasofinterest = [];
