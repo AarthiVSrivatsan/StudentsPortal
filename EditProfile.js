@@ -17,6 +17,26 @@ var EditProfile = function() {}
     //document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
 
   }
+  EditProfile.removeTeamHistory = function(elem) {
+    var teamName = elem.getAttribute("tname");
+    var userid = document.getElementById("userid").value;
+
+    var params = {};
+    params.teamname =  teamName;
+    params.user =  userid;
+
+    $DX.get({
+       url: "/fsdb/function/removeteamentry",
+       params: params,
+       handler: function() {
+         if(this.responseText == "Success") {
+           document.getElementById("studentprofileedit").classList.remove("dcappfsdbopaque");
+           document.getElementById("teamcontaineredit").classList.add("dcappfsdbhide");
+           alert("Team details deleted successfully");
+         }
+       }
+    });
+  }
   EditProfile.addTeamHistory = function() {
     var teamName = document.getElementById("teamname").value;
     var doj = document.getElementById("doj").value;
