@@ -12,9 +12,56 @@ var EditProfile = function() {}
     if(aoi != "") {
       EditProfile.areasofinterestedit.set(aoi);
     }
+
     document.getElementById("areasofinterestedit").classList.remove("dcappfsdbhide");
     //document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
 
+  }
+  EditProfile.addTeamHistory = function() {
+    var teamName = document.getElementById("teamname").value;
+    var doj = document.getElementById("doj").value;
+    var periodworked = document.getElementById("periodworked").value;
+    var roledone = document.getElementById("roledone").value;
+    var userid = document.getElementById("userid").value;
+
+    if(teamName === null || teamName === "") {
+      alert("Enter valid teamname");
+      return;
+    }
+    if(doj === null || doj === "") {
+      alert("Enter valid doj");
+      return;
+    }
+
+    if(periodworked === null || periodworked === "") {
+      alert("Enter valid periodworked");
+      return;
+    }
+
+    if(roledone === null || roledone === "") {
+      alert("Enter valid roledone");
+      return;
+    }
+
+    var params = {};
+    params.teamname =  teamName;
+    params.doj =  doj;
+    params.periodworked =  periodworked;
+    params.roledone =  roledone;
+    params.emailid =  userid;
+
+    $DX.get({
+       url: "/fsdb/function/addTeamEntry",
+       params: params,
+       handler: function() {
+         console.log(this.responseText);
+         if(this.responseText == "Success") {
+           document.getElementById("studentprofileedit").classList.remove("dcappfsdbopaque");
+           document.getElementById("teamcontaineredit").classList.add("dcappfsdbhide");
+           alert("Team details entered successfully");
+         }
+       }
+    });
   }
   EditProfile.editBloodGroup = function(bg) {
     document.getElementById("bloodgrouptxt").classList.add("dcappfsdbhide");
