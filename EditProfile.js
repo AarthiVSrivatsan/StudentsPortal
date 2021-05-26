@@ -2,6 +2,7 @@
 var EditProfile = function() {}
 
   EditProfile.areasofinterestedit = null;
+  EditProfile.bloodgroupedit = null;
   EditProfile.editAreasOfInterest = function(aoi) {
     document.getElementById("areasofinteresttxt").classList.add("dcappfsdbhide");
     EditProfile.areasofinterestedit = new SlimSelect({
@@ -12,6 +13,15 @@ var EditProfile = function() {}
     document.getElementById("areasofinterestedit").classList.remove("dcappfsdbhide");
     //document.getElementById("pencileditareas").classList.add("dcappfsdbhide");
 
+  }
+  EditProfile.editBloodGroup = function(bg) {
+    document.getElementById("bloodgrouptxt").classList.add("dcappfsdbhide");
+    EditProfile.bloodgroupedit = new SlimSelect({
+      select: "#bloodgroupedit"
+    });
+    EditProfile.bloodgroupedit.set(bg);
+
+    document.getElementById("bloodgroupedit").classList.remove("dcappfsdbhide");
   }
   EditProfile.editDetails = function(options) {
     var selfdesc = document.getElementById("selfdesc").value;
