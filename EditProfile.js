@@ -120,6 +120,10 @@ var EditProfile = function() {}
     var designation = document.getElementById("designation").value;
     var userid = document.getElementById("userid").value;
     var hobbies = document.getElementById("hobbies").value;
+    var phNumber = document.getElementById("contactnumber").value;
+    var dob = document.getElementById("dob").value;
+    var bloodgroup = "";
+    document.getElementById("bloodgroupedit") && (bloodgroup = document.getElementById("bloodgroupedit").filter(option => option.selected).map(option => option.value));
 
     var params = {};
     selfdesc && (params.selfdesc = selfdesc);
@@ -130,6 +134,9 @@ var EditProfile = function() {}
     hobbies && (params.hobbies = hobbies);
     designation && (params.designation = designation);
     userid && (params.user = userid);
+    phNumber && (params.contact = phNumber);
+    dob && (params.dob = dob);
+    bloodgroup && (params.bloodgroup = bloodgroup);
 
     $DX.get({
        url: "/fsdb/function/editProfile",
