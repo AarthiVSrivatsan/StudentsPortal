@@ -103,15 +103,6 @@ var EditProfile = function() {}
       }
     }
 
-    var batch = 0;
-    document.getElementById("batch") && (batch = document.getElementById("batch").value);
-    if(document.getElementById("batch")) {
-      if(batch < 1) {
-        alert("Invalid entries in the form. Batch should be greater than 1");
-        return;
-      }
-    }
-
 
     var streamzs = "";
     document.getElementById("streamzs") && (streamzs = document.getElementById("streamzs").value);
@@ -121,6 +112,13 @@ var EditProfile = function() {}
     var userid = document.getElementById("userid").value;
     var hobbies = document.getElementById("hobbies").value;
     var phNumber = document.getElementById("contactnumber").value;
+
+    var phoneno = /^\d{10}$/;
+    if(!phNumber.match(phoneno)){
+      alert("Invalid Phone Number");
+      return;
+    }
+
     var dob = document.getElementById("dob").value;
     var bloodgroup = "";
     document.getElementById("bloodgroupedit") && (bloodgroup = document.getElementById("bloodgroupedit").filter(option => option.selected).map(option => option.value));
@@ -128,7 +126,6 @@ var EditProfile = function() {}
     var params = {};
     selfdesc && (params.selfdesc = selfdesc);
     gradyear && (params.gradyear = gradyear);
-    batch && (params.batch = batch);
     streamzs && (params.streamzs = streamzs);
     areasofinterest && (params.areasofinterest = areasofinterest.join(","));
     hobbies && (params.hobbies = hobbies);
