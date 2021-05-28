@@ -107,10 +107,10 @@ var EditProfile = function() {}
     var streamzs = "";
     document.getElementById("streamzs") && (streamzs = document.getElementById("streamzs").value);
     var areasofinterest = [];
-    if(document.getElementById("areasofinterestedit").classList.contains("dcappfsdbhide")) {
+    if(!document.getElementById("areasofinterestedit").classList.contains("dcappfsdbhide")) {
         document.getElementById("areasofinterestedit") && (areasofinterest = [... document.getElementById("areasofinterestedit").options].filter(option => option.selected).map(option => option.value));
     }else{
-        areasofinterest = document.getElementById("areasofinteresttxt").getAttribute("dc-param-aoi");
+        areasofinterest = document.getElementById("areasofinteresttxt").getAttribute("dc-param-aoi").split(",");
     }
 
     var designation = document.getElementById("designation").value;
@@ -126,7 +126,7 @@ var EditProfile = function() {}
 
     var dob = document.getElementById("dob").value;
     var bloodgroup = "";
-    if(document.getElementById("bloodgroupedit").classList.contains("dcappfsdbhide")) {
+    if(!document.getElementById("bloodgroupedit").classList.contains("dcappfsdbhide")) {
         document.getElementById("bloodgroupedit") && (bloodgroup = [... document.getElementById("bloodgroupedit").options].filter(option => option.selected).map(option => option.value));
     }else{
       bloodgroup = document.getElementById("bloodgrouptxt").innerText;
