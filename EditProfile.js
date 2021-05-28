@@ -3,6 +3,7 @@ var EditProfile = function() {}
 
   EditProfile.areasofinterestedit = null;
   EditProfile.bloodgroupedit = null;
+  EditProfile.knowzsedit = null;
   EditProfile.editAreasOfInterest = function(aoi) {
     document.getElementById("areasofinteresttxt").classList.add("dcappfsdbhide");
     EditProfile.areasofinterestedit = new SlimSelect({
@@ -82,6 +83,15 @@ var EditProfile = function() {}
          }
        }
     });
+  }
+  EditProfile.editKnowZS = function(knowzs) {
+    document.getElementById("knowzstxt").classList.add("dcappfsdbhide");
+    EditProfile.knowzsedit = new SlimSelect({
+      select: "#knowzsedit"
+    });
+    EditProfile.knowzsedit.set(knowzs);
+
+    document.getElementById("knowzsedit").classList.remove("dcappfsdbhide");
   }
   EditProfile.editBloodGroup = function(bg) {
     document.getElementById("bloodgrouptxt").classList.add("dcappfsdbhide");
