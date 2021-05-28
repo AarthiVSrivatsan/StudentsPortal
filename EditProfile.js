@@ -119,8 +119,8 @@ var EditProfile = function() {}
     var phNumber = document.getElementById("contactnumber").value;
 
     // eduinfo, gender, linstname, zsknow.
-    var eduinfo = document.getElementById("edubg").innerText;
-    var linstname = document.getElementById("linstname").innerText;
+    var eduinfo = document.getElementById("edubg").value;
+    var linstname = document.getElementById("linstname").value;
     var gender = document.getElementById("gender").value;
     var knowzs = document.getElementById("knowzs").value;
 
