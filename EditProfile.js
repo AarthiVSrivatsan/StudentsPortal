@@ -129,10 +129,14 @@ var EditProfile = function() {}
     var phNumber = document.getElementById("contactnumber").value;
 
     // eduinfo, gender, linstname, zsknow.
-    var eduinfo = document.getElementById("edubg").value;
-    var linstname = document.getElementById("linstname").value;
-    var gender = document.getElementById("gender").value;
-    var knowzs = document.getElementById("knowzs").value;
+    var eduinfo = "";
+    var linstname = "";
+    var gender = "";
+    var knowzs = "";
+    document.getElementById("linstname") && (linstname = document.getElementById("linstname").value);
+    document.getElementById("knowzs") && (knowzs = document.getElementById("knowzs").value);
+    document.getElementById("edubg") && (eduinfo = document.getElementById("edubg").value);
+    document.getElementById("gender") && (gender = document.getElementById("gender").value);
 
     var phoneno = /^\d{10}$/;
     if(!phNumber.match(phoneno)){
