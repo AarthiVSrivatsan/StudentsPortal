@@ -105,13 +105,7 @@ var EditProfile = function() {}
   EditProfile.editDetails = function(options) {
     var selfdesc = document.getElementById("selfdesc").value;
     var gradyear = 0;
-    document.getElementById("gradyear") && (gradyear = document.getElementById("gradyear").value);
-    if(document.getElementById("gradyear")) {
-      if(gradyear < 1980) {
-        alert("Invalid entries in the form. Graduation year should be after 1980");
-        return;
-      }
-    }
+
 
 
     var streamzs = "";
@@ -134,7 +128,13 @@ var EditProfile = function() {}
     var gender = "";
     var knowzs = "";
     document.getElementById("linstname") && (linstname = document.getElementById("linstname").value);
-    document.getElementById("knowzs") && (knowzs = document.getElementById("knowzs").value);
+
+    if(!document.getElementById("knowzsedit").classList.contains("dcappfsdbhide")) {
+        document.getElementById("knowzsedit") && (knowzs = document.getElementById("knowzsedit").value);
+    }else{
+        knowzs = document.getElementById("knowzstxt").getAttribute("dc-param-knowzs");
+    }
+
     document.getElementById("edubg") && (eduinfo = document.getElementById("edubg").value);
     document.getElementById("gender") && (gender = document.getElementById("gender").value);
 
@@ -155,7 +155,7 @@ var EditProfile = function() {}
 
     var params = {};
     selfdesc && (params.selfdesc = selfdesc);
-    gradyear && (params.gradyear = gradyear);
+    gradyear>0 && (params.gradyear = gradyear);
     streamzs && (params.streamzs = streamzs);
     areasofinterest && (params.areasofinterest = areasofinterest.join(","));
     hobbies && (params.hobbies = hobbies);
