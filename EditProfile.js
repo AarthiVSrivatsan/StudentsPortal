@@ -7,7 +7,23 @@ var EditProfile = function() {}
   EditProfile.editAreasOfInterest = function(aoi) {
     document.getElementById("areasofinteresttxt").classList.add("dcappfsdbhide");
     EditProfile.areasofinterestedit = new SlimSelect({
-      select: "#areasofinterestedit"
+      select: "#areasofinterestedit",
+      onChange: (val)=>{
+        var flag = false;
+        //console.log(val);
+        for(var i=0;i<val.length; i++) {
+          if(val[i].value === "Other") {
+            flag = true;
+            document.getElementById("otherinterestDiv").classList.remove("dcappfsdbhide");
+            document.getElementById("otherinterestDiv").classList.add("tblrow");
+          }
+        }
+
+        if(!flag) {
+          document.getElementById("otherinterestDiv").classList.add("dcappfsdbhide");
+          document.getElementById("otherinterestDiv").classList.remove("tblrow");
+        }
+      }
     });
 
     if(aoi != "") {
