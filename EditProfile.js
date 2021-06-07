@@ -138,6 +138,9 @@ var EditProfile = function() {}
     document.getElementById("edubg") && (eduinfo = document.getElementById("edubg").value);
     document.getElementById("gender") && (gender = document.getElementById("gender").value);
 
+    var otherinterest = "";
+    document.getElementById("otherintereststxt") && (otherinterest = document.getElementById("otherintereststxt").value);
+
     var phoneno = /^\d{10}$/;
     if(!phNumber.match(phoneno)){
       alert("Invalid Phone Number");
@@ -168,6 +171,7 @@ var EditProfile = function() {}
     linstname && (params.linstname = linstname);
     gender && (params.gender = gender);
     knowzs && (params.zsknow = knowzs);
+    otherinterest && (params.otherinterest = otherinterest);
 
     $DX.get({
        url: "/fsdb/function/editProfile",
