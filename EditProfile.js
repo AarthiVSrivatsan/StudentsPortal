@@ -127,9 +127,9 @@ var EditProfile = function() {}
     var streamzs = "";
     document.getElementById("streamzs") && (streamzs = document.getElementById("streamzs").value);
     var areasofinterest = [];
-    if(!document.getElementById("areasofinterestedit").classList.contains("dcappfsdbhide")) {
+    if(document.getElementById("areasofinterestedit") && !document.getElementById("areasofinterestedit").classList.contains("dcappfsdbhide")) {
         document.getElementById("areasofinterestedit") && (areasofinterest = [... document.getElementById("areasofinterestedit").options].filter(option => option.selected).map(option => option.value));
-    }else{
+    }else if (document.getElementById("areasofinteresttxt")){
         areasofinterest = document.getElementById("areasofinteresttxt").getAttribute("dc-param-aoi").split(",");
     }
 
@@ -145,9 +145,9 @@ var EditProfile = function() {}
     var knowzs = "";
     document.getElementById("linstname") && (linstname = document.getElementById("linstname").value);
 
-    if(!document.getElementById("knowzsedit").classList.contains("dcappfsdbhide")) {
+    if(document.getElementById("knowzsedit") && !document.getElementById("knowzsedit").classList.contains("dcappfsdbhide")) {
         document.getElementById("knowzsedit") && (knowzs = document.getElementById("knowzsedit").value);
-    }else{
+    }else if (document.getElementById("knowzstxt")){
         knowzs = document.getElementById("knowzstxt").getAttribute("dc-param-knowzs");
     }
 
@@ -163,11 +163,12 @@ var EditProfile = function() {}
       return;
     }
 
-    var dob = document.getElementById("dob").value;
+    var dob = "";
+    document.getElementById("dob") && (dob = document.getElementById("dob").value);
     var bloodgroup = "";
-    if(!document.getElementById("bloodgroupedit").classList.contains("dcappfsdbhide")) {
+    if(document.getElementById("bloodgroupedit") && !document.getElementById("bloodgroupedit").classList.contains("dcappfsdbhide")) {
         document.getElementById("bloodgroupedit") && (bloodgroup = [... document.getElementById("bloodgroupedit").options].filter(option => option.selected).map(option => option.value));
-    }else{
+    }else if(document.getElementById("bloodgrouptxt")){
       bloodgroup = document.getElementById("bloodgrouptxt").innerText;
     }
 
