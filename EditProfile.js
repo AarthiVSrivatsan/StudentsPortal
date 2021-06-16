@@ -120,11 +120,14 @@ var EditProfile = function() {}
   }
   EditProfile.editDetails = function(options) {
     var userrole = document.getElementById("userrole").value;
-    var selfdesc = document.getElementById("selfdesc").value;
+    var selfdesc = "";
     var gradyear = 0;
 
 
-
+    document.getElementById("selfdesc") && (selfdesc = document.getElementById("selfdesc").value);
+    if(selfdesc != "") {
+      selfdesc = selfdesc.substring(0,150);
+    }
     var streamzs = "";
     document.getElementById("streamzs") && (streamzs = document.getElementById("streamzs").value);
     var areasofinterest = [];
