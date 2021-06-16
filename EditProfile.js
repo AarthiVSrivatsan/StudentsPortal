@@ -144,6 +144,10 @@ var EditProfile = function() {}
     var linstname = "";
     var gender = "";
     var knowzs = "";
+
+    var prevexp = "";
+    document.getElementById("prevexp") && (prevexp = document.getElementById("prevexp").value);
+
     document.getElementById("linstname") && (linstname = document.getElementById("linstname").value);
 
     if(document.getElementById("knowzsedit") && !document.getElementById("knowzsedit").classList.contains("dcappfsdbhide")) {
@@ -191,6 +195,7 @@ var EditProfile = function() {}
     knowzs && (params.zsknow = knowzs);
     otherinterest && (params.otherinterest = otherinterest);
     userrole && (params.userrole = userrole);
+    prevexp && (params.prevexp = prevexp);
 
     $DX.get({
        url: "/fsdb/function/editProfile",
