@@ -119,6 +119,7 @@ var EditProfile = function() {}
     document.getElementById("bloodgroupedit").classList.remove("dcappfsdbhide");
   }
   EditProfile.editDetails = function(options) {
+    var userrole = document.getElementById("userrole").value;
     var selfdesc = document.getElementById("selfdesc").value;
     var gradyear = 0;
 
@@ -189,6 +190,7 @@ var EditProfile = function() {}
     gender && (params.gender = gender);
     knowzs && (params.zsknow = knowzs);
     otherinterest && (params.otherinterest = otherinterest);
+    userrole && (params.userrole = userrole);
 
     $DX.get({
        url: "/fsdb/function/editProfile",
