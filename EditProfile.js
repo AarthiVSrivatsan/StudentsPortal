@@ -179,7 +179,7 @@ var EditProfile = function() {}
 
 
     var params = {};
-    selfdesc && (params.selfdesc = selfdesc);
+    selfdesc && (params.selfdesc = selfdesc.trim());
     gradyear>0 && (params.gradyear = gradyear);
     streamzs && (params.streamzs = streamzs);
     areasofinterest && (params.areasofinterest = areasofinterest.join(","));
