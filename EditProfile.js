@@ -204,6 +204,8 @@ var EditProfile = function() {}
          console.log(this.responseText);
          if(this.responseText == "Success") {
            window.location.href="/profiledetails?studentId="+userid;
+         }else{
+           alert("Error occured, please contact administrator");
          }
        }
     });
